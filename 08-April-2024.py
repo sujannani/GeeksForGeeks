@@ -9,7 +9,7 @@ class Solution:
     		if k in memo:
     			return memo[k]
     		option1 = arr[i] + min(solve(i+2, j), solve(i+1, j-1))
-    		option2 = arr[j] + min(solve(i+1, j-1), solve(i, j-2))
+    		option2 = arr[j] + min(solve(i+1, j-1), solve(i, j-2)) 
     		memo[k] = max(option1, option2)
     		return memo[k]
     
